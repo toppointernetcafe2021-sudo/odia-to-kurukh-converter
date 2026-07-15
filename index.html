@@ -1,0 +1,2016 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover" />
+    <title>ଓଡ଼ିଆ → କୁଁଡ଼ୁଖ୍ ବାନ୍ନା</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff0066">
+
+    <style>
+        /* ===== FONT ===== */
+        @font-face {
+            font-family: 'KuruxBanna Xalxo';
+            src: url('./kurukh.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* ============================================================
+           COLOURFUL THEME — NEON VIBRANT
+           ============================================================ */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html,
+        body {
+            height: 100%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(ellipse at 10% 20%, #1a0b2e, #0f0a1a, #05030a);
+            background-attachment: fixed;
+            color: #f0ece4;
+            font-family: 'Inter', -apple-system, 'Segoe UI', system-ui, sans-serif;
+            padding: 18px 14px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            line-height: 1.5;
+            -webkit-tap-highlight-color: transparent;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #00f0ff, #ff0066, #ffe600);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #ffe600, #ff0066, #00f0ff);
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                radial-gradient(1.5px 1.5px at 5% 10%, rgba(255, 255, 255, 0.6), transparent),
+                radial-gradient(1px 1px at 15% 60%, rgba(255, 255, 255, 0.4), transparent),
+                radial-gradient(2px 2px at 25% 85%, rgba(255, 255, 255, 0.7), transparent),
+                radial-gradient(1px 1px at 35% 15%, rgba(255, 255, 255, 0.3), transparent),
+                radial-gradient(1.5px 1.5px at 45% 45%, rgba(255, 255, 255, 0.5), transparent),
+                radial-gradient(1px 1px at 55% 75%, rgba(255, 255, 255, 0.4), transparent),
+                radial-gradient(2px 2px at 65% 5%, rgba(255, 255, 255, 0.6), transparent),
+                radial-gradient(1px 1px at 75% 55%, rgba(255, 255, 255, 0.3), transparent),
+                radial-gradient(1.5px 1.5px at 85% 90%, rgba(255, 255, 255, 0.5), transparent),
+                radial-gradient(1px 1px at 92% 30%, rgba(255, 255, 255, 0.4), transparent);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            z-index: 0;
+            animation: twinkle 6s ease-in-out infinite alternate;
+        }
+        @keyframes twinkle {
+            0% {
+                opacity: 0.4;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .glow-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(150px);
+            opacity: 0.35;
+            z-index: 0;
+            animation: orbitFloat 28s ease-in-out infinite alternate;
+        }
+        .glow-orb:nth-child(1) {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, #ff0066, #ff3300);
+            top: -200px;
+            right: -150px;
+            animation-delay: 0s;
+            opacity: 0.3;
+        }
+        .glow-orb:nth-child(2) {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, #00f0ff, #0088ff);
+            bottom: -150px;
+            left: -120px;
+            animation-delay: 6s;
+            opacity: 0.25;
+        }
+        .glow-orb:nth-child(3) {
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, #66ff00, #00cc44);
+            top: 30%;
+            left: 5%;
+            animation-delay: 12s;
+            opacity: 0.2;
+        }
+        .glow-orb:nth-child(4) {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, #ffe600, #ffaa00);
+            bottom: 20%;
+            right: 5%;
+            animation-delay: 18s;
+            opacity: 0.2;
+        }
+        @keyframes orbitFloat {
+            0% {
+                transform: translate(0, 0) scale(1) rotate(0deg);
+            }
+            33% {
+                transform: translate(60px, -50px) scale(1.2) rotate(10deg);
+            }
+            66% {
+                transform: translate(-40px, 50px) scale(0.8) rotate(-8deg);
+            }
+            100% {
+                transform: translate(50px, 40px) scale(1.1) rotate(-15deg);
+            }
+        }
+
+        .background-letters {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .background-letters span {
+            position: absolute;
+            font-family: 'KuruxBanna Xalxo', 'Noto Sans Devanagari', sans-serif;
+            color: rgba(255, 255, 255, 0.04);
+            animation: floatLetter var(--duration, 14s) ease-in-out infinite alternate;
+            user-select: none;
+            text-shadow: 0 0 30px rgba(0, 240, 255, 0.03);
+            will-change: transform, opacity;
+        }
+        .background-letters span:nth-child(3n+1) {
+            animation-name: floatLetter;
+        }
+        .background-letters span:nth-child(3n+2) {
+            animation-name: floatLetter2;
+        }
+        .background-letters span:nth-child(3n+3) {
+            animation-name: floatLetter3;
+        }
+        @keyframes floatLetter {
+            0% {
+                transform: translateY(0px) translateX(0px) rotate(0deg) scale(0.8);
+                opacity: 0.02;
+            }
+            50% {
+                opacity: 0.08;
+                transform: translateY(-50px) translateX(30px) rotate(12deg) scale(1.2);
+            }
+            100% {
+                transform: translateY(-100px) translateX(-20px) rotate(-10deg) scale(0.9);
+                opacity: 0.04;
+            }
+        }
+        @keyframes floatLetter2 {
+            0% {
+                transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+                opacity: 0.02;
+            }
+            50% {
+                opacity: 0.07;
+                transform: translateY(60px) translateX(-35px) rotate(-15deg) scale(1.25);
+            }
+            100% {
+                transform: translateY(120px) translateX(25px) rotate(12deg) scale(0.85);
+                opacity: 0.03;
+            }
+        }
+        @keyframes floatLetter3 {
+            0% {
+                transform: translateY(0px) translateX(0px) rotate(0deg) scale(0.9);
+                opacity: 0.015;
+            }
+            50% {
+                opacity: 0.06;
+                transform: translateY(-40px) translateX(-45px) rotate(-20deg) scale(1.18);
+            }
+            100% {
+                transform: translateY(-80px) translateX(40px) rotate(15deg) scale(0.88);
+                opacity: 0.03;
+            }
+        }
+
+        .wrap {
+            max-width: 1120px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============================================================
+           HEADER
+           ============================================================ */
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding: 16px 0 8px;
+            position: relative;
+        }
+        .header::after {
+            content: '';
+            display: block;
+            width: 140px;
+            height: 3px;
+            margin: 14px auto 0;
+            background: linear-gradient(90deg, #ff0066, #ffe600, #00f0ff, #66ff00, #ff0066);
+            background-size: 300% 100%;
+            border-radius: 4px;
+            animation: linePulse 4s ease-in-out infinite alternate;
+        }
+        @keyframes linePulse {
+            0% {
+                width: 100px;
+                opacity: 0.3;
+                background-position: 0% 50%;
+            }
+            100% {
+                width: 240px;
+                opacity: 1;
+                background-position: 100% 50%;
+            }
+        }
+
+        .header h1 {
+            font-size: clamp(32px, 6.5vw, 58px);
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffe600, #ff0066, #00f0ff, #66ff00, #ffe600);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.03em;
+            animation: gradientShift 8s ease-in-out infinite alternate;
+            filter: drop-shadow(0 0 50px rgba(255, 0, 102, 0.1));
+            position: relative;
+        }
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .header h1::before {
+            content: '✦ ';
+            font-size: 0.65em;
+            background: none;
+            -webkit-text-fill-color: initial;
+            color: rgba(255, 255, 255, 0.2);
+            animation: sparkle 2s ease-in-out infinite alternate;
+        }
+        .header h1::after {
+            content: ' ✦';
+            font-size: 0.65em;
+            background: none;
+            -webkit-text-fill-color: initial;
+            color: rgba(255, 255, 255, 0.2);
+            animation: sparkle 2s ease-in-out infinite alternate-reverse;
+        }
+        @keyframes sparkle {
+            0% {
+                opacity: 0.2;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 0.8;
+                transform: scale(1.2);
+            }
+        }
+
+        .header p {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: clamp(13px, 2.2vw, 17px);
+            margin-top: 10px;
+            font-weight: 400;
+            letter-spacing: 0.8px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+        .header p span {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 4px 18px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: inline-block;
+            backdrop-filter: blur(8px);
+            transition: all 0.4s ease;
+            font-size: clamp(11px, 1.6vw, 15px);
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .header p span:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #00f0ff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 240, 255, 0.1);
+        }
+
+        /* ============================================================
+           GRID
+           ============================================================ */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            align-items: stretch;
+        }
+
+        /* ============================================================
+           CARDS
+           ============================================================ */
+        .card {
+            border-radius: 28px;
+            overflow: hidden;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 12px 50px rgba(0, 0, 0, 0.5);
+            animation: cardSlide 0.8s ease-out both;
+            transform-origin: center;
+        }
+        .card:nth-child(1) {
+            animation-delay: 0.05s;
+        }
+        .card:nth-child(2) {
+            animation-delay: 0.15s;
+        }
+
+        @keyframes cardSlide {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.96);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.008);
+            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.6);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 28px;
+            padding: 2px;
+            background: linear-gradient(135deg, #ff0066, #ffe600, #00f0ff, #66ff00, #ff0066);
+            background-size: 400% 400%;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            animation: borderGlow 8s ease-in-out infinite alternate;
+            opacity: 0.3;
+            transition: opacity 0.5s ease;
+        }
+        .card:hover::before {
+            opacity: 0.9;
+        }
+        @keyframes borderGlow {
+            0% {
+                background-position: 0% 50%;
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                background-position: 100% 50%;
+                opacity: 0.3;
+            }
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.02), transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .card-input {
+            background: linear-gradient(160deg, rgba(0, 240, 255, 0.05), rgba(0, 136, 255, 0.02));
+            border: 1px solid rgba(0, 240, 255, 0.08);
+        }
+        .card-input .card-head {
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.08), rgba(0, 136, 255, 0.03));
+            border-bottom: 1px solid rgba(0, 240, 255, 0.06);
+            position: relative;
+            z-index: 1;
+        }
+        .card-input .card-head h2 {
+            background: linear-gradient(135deg, #00f0ff, #0088ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-input .card-head .icon {
+            color: #00f0ff;
+            filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.2));
+        }
+
+        .card-output {
+            background: linear-gradient(160deg, rgba(255, 0, 102, 0.05), rgba(255, 51, 0, 0.02));
+            border: 1px solid rgba(255, 0, 102, 0.08);
+        }
+        .card-output .card-head {
+            background: linear-gradient(135deg, rgba(255, 0, 102, 0.08), rgba(255, 51, 0, 0.03));
+            border-bottom: 1px solid rgba(255, 0, 102, 0.06);
+            position: relative;
+            z-index: 1;
+        }
+        .card-output .card-head h2 {
+            background: linear-gradient(135deg, #ff0066, #ff3300);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-output .card-head .icon {
+            color: #ff0066;
+            filter: drop-shadow(0 0 12px rgba(255, 0, 102, 0.2));
+        }
+
+        .card-head {
+            padding: 18px 22px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            position: relative;
+            z-index: 1;
+        }
+        .card-head h2 {
+            font-size: clamp(15px, 2.2vw, 19px);
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.01em;
+        }
+        .card-head .icon {
+            font-size: 26px;
+            line-height: 1;
+            transition: transform 0.4s ease;
+        }
+        .card:hover .card-head .icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+        .card-body {
+            padding: 20px 22px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============================================================
+           TEXTAREA
+           ============================================================ */
+        textarea {
+            width: 100%;
+            min-height: 72px;
+            max-height: 400px;
+            border: 1.5px solid rgba(255, 255, 255, 0.04);
+            border-radius: 18px;
+            background: rgba(0, 0, 0, 0.4);
+            color: #f0ece4;
+            padding: 14px 20px;
+            outline: none;
+            resize: none;
+            line-height: 1.7;
+            font-size: 21px;
+            font-family: inherit;
+            transition: all 0.4s ease;
+            overflow: hidden;
+            box-shadow: inset 0 4px 16px rgba(0, 0, 0, 0.5);
+            -webkit-appearance: none;
+            appearance: none;
+            backdrop-filter: blur(4px);
+        }
+        .card-input textarea:focus {
+            border-color: #00f0ff;
+            box-shadow: 0 0 0 5px rgba(0, 240, 255, 0.05), inset 0 4px 16px rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .card-input textarea::placeholder {
+            color: rgba(255, 255, 255, 0.12);
+            font-size: 17px;
+        }
+
+        /* ============================================================
+           OUTPUT
+           ============================================================ */
+        .output {
+            min-height: 160px;
+            border: 1.5px solid rgba(255, 255, 255, 0.04);
+            border-radius: 18px;
+            background: rgba(0, 0, 0, 0.4);
+            color: #f0ece4;
+            padding: 14px 20px;
+            line-height: 1.4;
+            font-size: clamp(36px, 6.8vw, 52px);
+            font-family: 'KuruxBanna Xalxo', 'Noto Sans Devanagari', sans-serif;
+            white-space: pre-wrap;
+            word-break: break-word;
+            overflow-x: auto;
+            cursor: pointer;
+            user-select: text;
+            box-shadow: inset 0 4px 16px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
+            min-height: 140px;
+            backdrop-filter: blur(4px);
+            position: relative;
+        }
+        .output.empty::before {
+            content: "✨ ବାନ୍ନା ଏଠାରେ ଚମକିବ";
+            color: rgba(255, 255, 255, 0.08);
+            font-family: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+        .card-output .output:focus {
+            border-color: #ff0066;
+            box-shadow: 0 0 0 5px rgba(255, 0, 102, 0.05), inset 0 4px 16px rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .output:not(.empty) {
+            border-color: rgba(255, 0, 102, 0.1);
+            box-shadow: inset 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 60px rgba(255, 0, 102, 0.03);
+        }
+        .output:not(.empty):hover {
+            border-color: rgba(255, 0, 102, 0.2);
+            box-shadow: inset 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 80px rgba(255, 0, 102, 0.05);
+        }
+
+        .output.ripple {
+            animation: outputRipple 0.5s ease;
+        }
+        @keyframes outputRipple {
+            0% {
+                transform: scale(1);
+            }
+            30% {
+                transform: scale(0.98);
+                border-color: #ffe600;
+            }
+            60% {
+                transform: scale(1.02);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* ============================================================
+           BUTTONS
+           ============================================================ */
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 18px;
+            justify-content: flex-start;
+        }
+        button {
+            border: none;
+            border-radius: 50px;
+            padding: 10px 26px;
+            font-weight: 700;
+            font-size: clamp(12px, 1.7vw, 14px);
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: inherit;
+            touch-action: manipulation;
+            min-height: 46px;
+            min-width: 46px;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.3px;
+        }
+        button::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        button:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4);
+        }
+        button:active {
+            transform: scale(0.95);
+            transition-duration: 0.1s;
+        }
+        button .btn-icon {
+            font-size: 16px;
+            line-height: 1;
+            transition: transform 0.3s ease;
+        }
+        button:hover .btn-icon {
+            transform: scale(1.15) rotate(-5deg);
+        }
+
+        .card-input .btn-primary {
+            background: linear-gradient(135deg, #00f0ff, #0088ff);
+            box-shadow: 0 4px 24px rgba(0, 240, 255, 0.15);
+        }
+        .card-input .btn-primary:hover {
+            box-shadow: 0 8px 36px rgba(0, 240, 255, 0.25);
+        }
+
+        .card-input .btn-danger {
+            background: linear-gradient(135deg, #ff0066, #ff3300);
+            box-shadow: 0 4px 24px rgba(255, 0, 102, 0.15);
+        }
+        .card-input .btn-danger:hover {
+            box-shadow: 0 8px 36px rgba(255, 0, 102, 0.25);
+        }
+
+        .card-input .btn-ghost {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: rgba(255, 255, 255, 0.6);
+            box-shadow: none;
+        }
+        .card-input .btn-ghost:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: #00f0ff;
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(0, 240, 255, 0.1);
+        }
+
+        .card-output .btn-primary {
+            background: linear-gradient(135deg, #ff0066, #ff3300);
+            box-shadow: 0 4px 24px rgba(255, 0, 102, 0.15);
+        }
+        .card-output .btn-primary:hover {
+            box-shadow: 0 8px 36px rgba(255, 0, 102, 0.25);
+        }
+
+        .card-output .btn-danger {
+            background: linear-gradient(135deg, #ff0066, #ff3300);
+            box-shadow: 0 4px 24px rgba(255, 0, 102, 0.15);
+        }
+        .card-output .btn-danger:hover {
+            box-shadow: 0 8px 36px rgba(255, 0, 102, 0.25);
+        }
+
+        .card-output .btn-ghost {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: rgba(255, 255, 255, 0.6);
+            box-shadow: none;
+        }
+        .card-output .btn-ghost:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: #ff0066;
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(255, 0, 102, 0.1);
+        }
+
+        .btn-share {
+            background: linear-gradient(135deg, #66ff00, #00cc44);
+            box-shadow: 0 4px 24px rgba(102, 255, 0, 0.15);
+        }
+        .btn-share:hover {
+            box-shadow: 0 8px 36px rgba(102, 255, 0, 0.25);
+        }
+
+        /* ============================================================
+           INFO SECTION
+           ============================================================ */
+        .info-section {
+            margin-top: 38px;
+            padding: 28px 24px;
+            border-radius: 28px;
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 12px 50px rgba(0, 0, 0, 0.3);
+            animation: cardSlide 0.8s ease-out both;
+            animation-delay: 0.25s;
+            position: relative;
+            overflow: hidden;
+        }
+        .info-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 20%, rgba(255, 0, 102, 0.03), transparent 70%);
+            pointer-events: none;
+        }
+        .info-section h2 {
+            font-size: clamp(22px, 3.2vw, 28px);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 22px;
+            background: linear-gradient(135deg, #ffe600, #ff0066, #00f0ff, #66ff00);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 8s ease-in-out infinite alternate;
+            letter-spacing: -0.02em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============================================================
+           KEYMAP — POPUP ON HOVER
+           ============================================================ */
+
+        .info-card {
+            border-radius: 18px;
+            padding: 18px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: all 0.4s ease;
+            backdrop-filter: blur(4px);
+        }
+        .info-card:hover {
+            transform: scale(1.015);
+            border-color: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-card:nth-child(1) {
+            background: rgba(155, 89, 182, 0.08);
+            border-color: rgba(155, 89, 182, 0.1);
+        }
+        .info-card:nth-child(1):hover {
+            background: rgba(155, 89, 182, 0.15);
+            border-color: #9b59b6;
+        }
+        .info-card:nth-child(1) h3::before {
+            background: linear-gradient(180deg, #9b59b6, #8e44ad);
+        }
+
+        .info-card:nth-child(2) {
+            background: rgba(46, 204, 113, 0.08);
+            border-color: rgba(46, 204, 113, 0.1);
+        }
+        .info-card:nth-child(2):hover {
+            background: rgba(46, 204, 113, 0.15);
+            border-color: #2ecc71;
+        }
+        .info-card:nth-child(2) h3::before {
+            background: linear-gradient(180deg, #2ecc71, #27ae60);
+        }
+
+        .info-card h3 {
+            font-size: clamp(13px, 1.7vw, 15px);
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+            padding-bottom: 10px;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .info-card h3::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            border-radius: 4px;
+        }
+
+        .info-card .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(68px, 1fr));
+            gap: 6px;
+        }
+
+        /* ---- Alphabet Chart Items ---- */
+        .char-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 14px;
+            padding: 5px 2px;
+            font-size: 11px;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+        .char-item:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.08);
+            transform: scale(1.08);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+        .char-item .kurukh-char {
+            font-family: 'KuruxBanna Xalxo', sans-serif;
+            font-size: clamp(24px, 4vw, 32px);
+            line-height: 1.2;
+            color: #f0ece4;
+        }
+        .char-item .roman-char {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0 8px;
+            border-radius: 8px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        /* ---- KEYMAP ITEMS WITH POPUP ---- */
+        .keymap-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 14px;
+            padding: 6px 4px;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            min-height: 54px;
+            justify-content: center;
+        }
+        .keymap-item:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(255, 255, 255, 0.08);
+            transform: scale(1.04);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+            z-index: 10;
+        }
+
+        .keymap-item .key-roman {
+            font-family: 'KuruxBanna Xalxo', sans-serif;
+            font-size: clamp(22px, 3.8vw, 30px);
+            line-height: 1.2;
+            color: #f0ece4;
+            transition: all 0.3s ease;
+        }
+        .keymap-item:hover .key-roman {
+            color: #ffe600;
+            transform: scale(1.05);
+        }
+
+        .keymap-item .key-sub {
+            font-size: 9px;
+            color: rgba(255, 255, 255, 0.15);
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0 6px;
+            border-radius: 6px;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            margin-top: 1px;
+            transition: all 0.3s ease;
+        }
+        .keymap-item:hover .key-sub {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* ---- POPUP TOOLTIP ---- */
+        .keymap-item .popup-tip {
+            position: absolute;
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%) translateY(8px) scale(0.92);
+            background: linear-gradient(145deg, rgba(20, 10, 40, 0.96), rgba(40, 0, 60, 0.96));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 8px 16px;
+            min-width: 90px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .keymap-item:hover .popup-tip {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .keymap-item .popup-tip .tip-odia {
+            font-size: clamp(20px, 2.8vw, 26px);
+            font-family: 'KuruxBanna Xalxo', sans-serif;
+            color: #00f0ff;
+        }
+        .keymap-item .popup-tip .tip-arrow {
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 14px;
+            font-weight: 300;
+        }
+        .keymap-item .popup-tip .tip-roman {
+            font-size: clamp(16px, 2.2vw, 20px);
+            font-family: 'KuruxBanna Xalxo', sans-serif;
+            color: #ffe600;
+        }
+        .keymap-item .popup-tip .tip-label {
+            font-size: 9px;
+            color: rgba(255, 255, 255, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 2px;
+            font-weight: 400;
+        }
+
+        /* Small triangle/arrow under popup */
+        .keymap-item .popup-tip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: rgba(255, 255, 255, 0.06);
+        }
+
+        .group-label {
+            font-size: 11px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #ffe600, #ff0066);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 8px 0 4px;
+            grid-column: 1 / -1;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        .footer {
+            margin-top: 32px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.1);
+            font-size: clamp(11px, 1.5vw, 13px);
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            padding-top: 18px;
+            letter-spacing: 0.8px;
+            transition: color 0.4s ease;
+        }
+        .footer:hover {
+            color: rgba(255, 255, 255, 0.2);
+        }
+        .footer strong {
+            background: linear-gradient(135deg, #ffe600, #ff0066);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        /* ============================================================
+           TOAST
+           ============================================================ */
+        .toast {
+            position: fixed;
+            left: 50%;
+            bottom: 32px;
+            transform: translateX(-50%) translateY(30px);
+            background: rgba(10, 10, 30, 0.92);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 60px;
+            padding: 12px 32px;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 12px 60px rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            backdrop-filter: blur(20px);
+            white-space: nowrap;
+            max-width: 92%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background: linear-gradient(135deg, rgba(20, 10, 40, 0.96), rgba(40, 0, 60, 0.96));
+            border: 1px solid rgba(255, 0, 102, 0.1);
+            z-index: 9999;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+        .toast .toast-icon {
+            font-size: 18px;
+        }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 820px) {
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            body {
+                padding: 14px 10px;
+            }
+            .card-body {
+                padding: 16px;
+            }
+            .card-head {
+                padding: 14px 16px;
+            }
+            .output {
+                font-size: clamp(28px, 5vw, 40px);
+                min-height: 120px;
+            }
+            textarea {
+                min-height: 58px;
+                font-size: 18px;
+            }
+            .actions {
+                gap: 8px;
+            }
+            button {
+                padding: 8px 18px;
+                font-size: 12px;
+                min-height: 40px;
+            }
+            .info-section {
+                padding: 18px 14px;
+                margin-top: 26px;
+            }
+            .info-card {
+                padding: 12px 10px;
+            }
+            .info-card .char-grid {
+                grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+            }
+            .keymap-item .popup-tip {
+                min-width: 70px;
+                padding: 6px 12px;
+                bottom: calc(100% + 8px);
+            }
+            .keymap-item .popup-tip .tip-odia {
+                font-size: 18px;
+            }
+            .keymap-item .popup-tip .tip-roman {
+                font-size: 14px;
+            }
+            .keymap-item .popup-tip .tip-arrow {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px 6px;
+            }
+            .header h1 {
+                font-size: clamp(20px, 5.5vw, 28px);
+            }
+            .header p {
+                font-size: 11px;
+                gap: 4px;
+            }
+            .header p span {
+                padding: 2px 12px;
+                font-size: 10px;
+            }
+            .card-head {
+                padding: 10px 12px;
+            }
+            .card-head h2 {
+                font-size: 13px;
+            }
+            .card-head .icon {
+                font-size: 18px;
+            }
+            .card-body {
+                padding: 12px;
+            }
+            textarea {
+                min-height: 46px;
+                font-size: 15px;
+                padding: 10px 14px;
+                border-radius: 14px;
+            }
+            .output {
+                font-size: clamp(22px, 5vw, 32px);
+                min-height: 90px;
+                padding: 10px 14px;
+                border-radius: 14px;
+            }
+            .output.empty::before {
+                font-size: 12px;
+            }
+            .actions {
+                gap: 4px;
+            }
+            button {
+                padding: 5px 12px;
+                font-size: 11px;
+                min-height: 32px;
+                min-width: 32px;
+                border-radius: 40px;
+                gap: 4px;
+            }
+            button .btn-icon {
+                font-size: 13px;
+            }
+            .info-section {
+                padding: 12px 8px;
+                margin-top: 18px;
+                border-radius: 20px;
+            }
+            .info-section h2 {
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+            .info-card {
+                padding: 8px 6px;
+                border-radius: 14px;
+            }
+            .info-card h3 {
+                font-size: 12px;
+                margin-bottom: 10px;
+                padding-bottom: 6px;
+            }
+            .info-card .char-grid {
+                grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+                gap: 4px;
+            }
+            .char-item {
+                padding: 3px 2px;
+                border-radius: 10px;
+            }
+            .char-item .kurukh-char {
+                font-size: clamp(18px, 4vw, 24px);
+            }
+            .char-item .roman-char {
+                font-size: 9px;
+                padding: 0 5px;
+            }
+            .keymap-item {
+                padding: 4px 2px;
+                min-height: 44px;
+            }
+            .keymap-item .key-roman {
+                font-size: clamp(18px, 3.5vw, 24px);
+            }
+            .keymap-item .key-sub {
+                font-size: 7px;
+            }
+            .keymap-item .popup-tip {
+                min-width: 60px;
+                padding: 4px 10px;
+                bottom: calc(100% + 6px);
+                border-radius: 10px;
+                gap: 4px;
+            }
+            .keymap-item .popup-tip .tip-odia {
+                font-size: 16px;
+            }
+            .keymap-item .popup-tip .tip-roman {
+                font-size: 12px;
+            }
+            .keymap-item .popup-tip .tip-arrow {
+                font-size: 10px;
+            }
+            .keymap-item .popup-tip .tip-label {
+                font-size: 7px;
+            }
+            .keymap-item .popup-tip::after {
+                border-width: 4px;
+            }
+            .group-label {
+                font-size: 9px;
+                margin: 4px 0 2px;
+            }
+            .footer {
+                font-size: 10px;
+                padding-top: 12px;
+                margin-top: 16px;
+            }
+            .toast {
+                font-size: 12px;
+                padding: 8px 18px;
+                bottom: 12px;
+                border-radius: 40px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            button {
+                padding: 4px 8px;
+                font-size: 10px;
+                min-height: 28px;
+                min-width: 28px;
+                gap: 3px;
+            }
+            button .btn-icon {
+                font-size: 11px;
+            }
+            .output {
+                font-size: 18px;
+                min-height: 70px;
+                padding: 8px 10px;
+            }
+            textarea {
+                font-size: 14px;
+                min-height: 38px;
+                padding: 8px 10px;
+            }
+            .header h1 {
+                font-size: 18px;
+            }
+            .info-card .char-grid {
+                grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            }
+            .char-item .kurukh-char {
+                font-size: 16px;
+            }
+            .keymap-item .key-roman {
+                font-size: 16px;
+            }
+            .keymap-item .popup-tip {
+                min-width: 50px;
+                padding: 3px 8px;
+            }
+            .keymap-item .popup-tip .tip-odia {
+                font-size: 14px;
+            }
+            .keymap-item .popup-tip .tip-roman {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 800px) and (orientation: landscape) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            .output {
+                font-size: clamp(22px, 3vw, 34px);
+                min-height: 80px;
+            }
+            textarea {
+                min-height: 44px;
+                font-size: 16px;
+            }
+            .card-body {
+                padding: 10px 12px;
+            }
+            .card-head {
+                padding: 8px 12px;
+            }
+            .card-head h2 {
+                font-size: 13px;
+            }
+            .header h1 {
+                font-size: clamp(24px, 4vw, 36px);
+            }
+            .keymap-item .popup-tip {
+                min-width: 70px;
+                padding: 6px 12px;
+            }
+            .keymap-item .popup-tip .tip-odia {
+                font-size: 18px;
+            }
+            .keymap-item .popup-tip .tip-roman {
+                font-size: 14px;
+            }
+        }
+
+        button,
+        .output,
+        .char-item,
+        .keymap-item {
+            touch-action: manipulation;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js">
+    </script>
+</head>
+<body>
+    <!-- Colorful Rotating Orbs -->
+    <div class="glow-orb"></div>
+    <div class="glow-orb"></div>
+    <div class="glow-orb"></div>
+    <div class="glow-orb"></div>
+
+    <!-- Background Letters -->
+    <div class="background-letters" id="bgLetters"></div>
+
+    <div class="wrap">
+        <div class="header">
+            <h1>ଓଡ଼ିଆ → କୁଁଡ଼ୁଖ୍ ବାନ୍ନା</h1>
+            <p><span>⌨️ ଟାଇପ୍ କରନ୍ତୁ · ରିଆଲ୍-ଟାଇମ୍</span> <span>🔮 ଆଉଟପୁଟ୍ କ୍ଲିକ୍ କରନ୍ତୁ କପି କରିବାକୁ</span></p>
+        </div>
+
+        <div class="grid">
+            <!-- Input Card -->
+            <div class="card card-input">
+                <div class="card-head">
+                    <span class="icon">✍️</span>
+                    <h2>ଓଡ଼ିଆ ଇନପୁଟ୍</h2>
+                </div>
+                <div class="card-body">
+                    <textarea id="inputText" placeholder="ଏଠାରେ ଓଡ଼ିଆ ଟାଇପ୍ କରନ୍ତୁ...">କୁଁଡ଼ୁଖ୍ ଭାଷା ଆମର ପରିଚୟ</textarea>
+                    <div class="actions">
+                        <button id="copyInput" class="btn-primary"><span class="btn-icon">📋</span> କପି</button>
+                        <button id="clearInput" class="btn-danger"><span class="btn-icon">🗑️</span> ସାଫ୍</button>
+                        <button id="sampleInput" class="btn-ghost"><span class="btn-icon">✨</span> ନମୁନା</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Output Card -->
+            <div class="card card-output">
+                <div class="card-head">
+                    <span class="icon">🔤</span>
+                    <h2>କୁଁଡ଼ୁଖ୍ ବାନ୍ନା ଆଉଟପୁଟ୍</h2>
+                </div>
+                <div class="card-body">
+                    <div id="outputText" class="output empty" tabindex="0" title="କପି କରିବାକୁ କ୍ଲିକ୍ କରନ୍ତୁ"></div>
+                    <div class="actions">
+                        <button id="copyOutput" class="btn-primary"><span class="btn-icon">📋</span> କପି</button>
+                        <button id="downloadTxt" class="btn-ghost"><span class="btn-icon">📄</span> .txt</button>
+                        <button id="downloadCombined" class="btn-primary"><span class="btn-icon">🖼️</span> PNG</button>
+                        <button id="shareImage" class="btn-share"><span class="btn-icon">📤</span> ସେୟାର୍</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== INFO SECTION ===== -->
+        <div class="info-section">
+            <h2>📚 କୁଁଡ଼ୁଖ୍ ବାନ୍ନା ବର୍ଣ୍ଣମାଳା ଏବଂ କୀମ୍ୟାପ୍</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🔠 ଓଡ଼ିଆ → କୁଁଡ଼ୁଖ୍ ବାନ୍ନା</h3>
+                    <div class="char-grid" id="alphabetChart"></div>
+                </div>
+                <div class="info-card">
+                    <h3>⌨️ କୀମ୍ୟାପ୍ (ରୋମନ୍ → କୁଁଡ଼ୁଖ୍)</h3>
+                    <div class="char-grid" id="keymapChart"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            🪶 <strong>କୁଁଡ଼ୁଖ୍ ବାନ୍ନା</strong> · ସଂରକ୍ଷଣ · ଡିଜାଇନ୍ ଓ ବିକାଶ <strong>ରୋଶନ୍ ଟୋପ୍ପୋ</strong>
+        </div>
+    </div>
+    <div class="toast" id="toast"><span class="toast-icon">✨</span> <span id="toastMsg">Message</span></div>
+
+    <script>
+        // ============================================================
+        //  CONVERTER (Odia → Kurukh)
+        // ============================================================
+
+        const inputText = document.getElementById('inputText');
+        const outputText = document.getElementById('outputText');
+        const toast = document.getElementById('toast');
+        const toastMsg = document.getElementById('toastMsg');
+
+        // ----- Odia → Kurukh (Roman) mappings -----
+
+        const consMap = {
+            'କ': 'k',
+            'ଖ': 'K',
+            'ଗ': 'g',
+            'ଘ': 'G',
+            'ଙ': '<',
+            'ଚ': 'c',
+            'ଛ': 'C',
+            'ଜ': 'j',
+            'ଝ': 'J',
+            'ଞ': '^',
+            'ଟ': 't',
+            'ଠ': 'T',
+            'ଡ': 'L',
+            'ଢ': 'X',
+            'ଣ': 'F',
+            'ତ': 'z',
+            'ଥ': 'Z',
+            'ଦ': 'd',
+            'ଧ': 'D',
+            'ନ': 'n',
+            'ପ': 'p',
+            'ଫ': 'f',
+            'ବ': 'b',
+            'ଭ': 'B',
+            'ମ': 'm',
+            'ୟ': 'y',
+            'ର': 'r',
+            'ଲ': 'l',
+            'ୱ': 'v',
+            'ଶ': 'S',
+            'ଷ': '{',
+            'ସ': 's',
+            'ହ': 'h',
+            'କ୍ଷ': 'H',
+            'ତ୍ର': '}',
+            'ଜ୍ଞ': '>',
+            'ଡ଼': 'P',
+            'ଢ଼': 'R',
+            'ଖ଼': 'x'
+        };
+
+        const vowelMap = {
+            'ଅ': 'A',
+            'ଆ': 'Aa',
+            'ଇ': 'q',
+            'ଈ': 'Q',
+            'ଉ': 'w',
+            'ଊ': 'W',
+            'ଏ': 'V',
+            'ଐ': 'Y',
+            'ଓ': 'Ao',
+            'ଔ': 'AO',
+            'ଅଂ': 'AN',
+            'ଅଁ': 'AM'
+        };
+
+        const matraMap = {
+            'ା': 'a',
+            'ି': 'i',
+            'ୀ': 'I',
+            'ୁ': 'u',
+            'ୂ': 'U',
+            'େ': 'e',
+            'ୈ': 'E',
+            'ୋ': 'o',
+            'ୌ': 'O'
+        };
+
+        const signMap = {
+            'ଂ': 'N',
+            'ଁ': 'M',
+            'ଃ': '[',
+            '୍': '-',
+            '।': 'a'
+        };
+
+        const specialPhrases = [
+            ['କ୍ଷ', 'H'],
+            ['ତ୍ର', '}'],
+            ['ଜ୍ଞ', '>'],
+            ['ଡ଼', 'P'],
+            ['ଢ଼', 'R'],
+            ['ଖ଼', 'x']
+        ];
+
+        function normalizeOd(text) {
+            let t = text;
+            for (const [src, dst] of specialPhrases) {
+                t = t.split(src).join(dst);
+            }
+            return t;
+        }
+
+        function showToast(msg, icon = '✨') {
+            toastMsg.textContent = msg;
+            toast.querySelector('.toast-icon').textContent = icon;
+            toast.classList.add('show');
+            clearTimeout(showToast._t);
+            showToast._t = setTimeout(() => toast.classList.remove('show'), 1400);
+        }
+
+        function autoResize() {
+            inputText.style.height = 'auto';
+            inputText.style.height = inputText.scrollHeight + 'px';
+        }
+
+        function odToKurukh(text) {
+            text = normalizeOd(text);
+            let out = '';
+            for (let i = 0; i < text.length; i++) {
+                const ch = text[i];
+                if (ch === ' ' || ch === '\n' || ch === '\t') {
+                    out += ch;
+                    continue;
+                }
+
+                if (consMap[ch]) {
+                    const token1 = consMap[ch];
+                    const next = text[i + 1];
+
+                    if (next === '୍') {
+                        const next2 = text[i + 2];
+                        if (consMap[next2]) {
+                            let token2 = consMap[next2];
+                            let matraToken = '';
+                            let matraSkipped = 0;
+                            const next3 = text[i + 3];
+                            if (next3 && matraMap[next3]) {
+                                matraToken = matraMap[next3];
+                                matraSkipped = 1;
+                            }
+                            let conjunct = token1 + '-' + token2;
+                            if (matraToken) {
+                                if (matraToken === 'i') {
+                                    conjunct = matraToken + conjunct;
+                                } else if (matraToken === 'I') {
+                                    conjunct = conjunct + matraToken;
+                                } else {
+                                    conjunct = conjunct + matraToken;
+                                }
+                            }
+                            out += conjunct;
+                            i += 2 + matraSkipped;
+                            continue;
+                        } else {
+                            out += token1;
+                            i += 1;
+                            continue;
+                        }
+                    } else if (matraMap[next]) {
+                        let token = token1;
+                        let matraToken = matraMap[next];
+                        if (matraToken === 'i') {
+                            token = matraToken + token;
+                        } else {
+                            token = token + matraToken;
+                        }
+                        out += token;
+                        i += 1;
+                        continue;
+                    } else {
+                        out += token1;
+                        continue;
+                    }
+                }
+
+                if (vowelMap[ch]) {
+                    out += vowelMap[ch];
+                    continue;
+                }
+
+                if (matraMap[ch]) {
+                    out += matraMap[ch];
+                    continue;
+                }
+
+                if (signMap[ch] !== undefined) {
+                    out += signMap[ch];
+                    continue;
+                }
+
+                out += ch;
+            }
+            return out;
+        }
+
+        function update() {
+            const converted = odToKurukh(inputText.value);
+            outputText.textContent = converted;
+            outputText.classList.toggle('empty', !converted.trim());
+            autoResize();
+        }
+
+        inputText.addEventListener('input', update);
+        inputText.addEventListener('keydown', () => setTimeout(autoResize, 0));
+
+        document.getElementById('clearInput').addEventListener('click', () => {
+            inputText.value = '';
+            update();
+            inputText.focus();
+            showToast('ଇନପୁଟ୍ ସାଫ୍ ହୋଇଗଲା', '🗑️');
+        });
+
+        document.getElementById('sampleInput').addEventListener('click', () => {
+            inputText.value = 'କୁଁଡ଼ୁଖ୍ ଭାଷା ଆମର ପରିଚୟ ।';
+            update();
+            inputText.focus();
+            showToast('ନମୁନା ଲୋଡ୍ ହୋଇଗଲା', '✨');
+        });
+
+        document.getElementById('copyInput').addEventListener('click', async () => {
+            const text = inputText.value || '';
+            try {
+                await navigator.clipboard.writeText(text);
+                showToast('ଇନପୁଟ୍ କପି ହୋଇଗଲା', '📋');
+            } catch (e) {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                ta.remove();
+                showToast('ଇନପୁଟ୍ କପି ହୋଇଗଲା', '📋');
+            }
+        });
+
+        document.getElementById('copyOutput').addEventListener('click', () => {
+            const text = outputText.textContent || '';
+            if (!text.trim()) {
+                showToast('କିଛି ନାହିଁ କପି କରିବାକୁ', '⚠️');
+                return;
+            }
+            const range = document.createRange();
+            range.selectNodeContents(outputText);
+            const sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('ବାନ୍ନା କପି ହୋଇଗଲା', '✅');
+                outputText.classList.add('ripple');
+                setTimeout(() => outputText.classList.remove('ripple'), 500);
+            }).catch(() => {
+                showToast('ସିଲେକ୍ଟ୍ ହୋଇଗଲା, ମାନୁଆଲ୍ କପି କରନ୍ତୁ', '📋');
+            });
+        });
+
+        outputText.addEventListener('click', () => document.getElementById('copyOutput').click());
+
+        document.getElementById('downloadTxt').addEventListener('click', () => {
+            const content = outputText.textContent || '';
+            if (!content.trim()) {
+                showToast('ଆଉଟପୁଟ୍ ଖାଲି ଅଛି', '⚠️');
+                return;
+            }
+            const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'kurukh-output.txt';
+            a.click();
+            URL.revokeObjectURL(a.href);
+            showToast('.txt ଡାଉନଲୋଡ୍ ହୋଇଗଲା', '📄');
+        });
+
+        // ============================================================
+        //  COMBINED PNG
+        // ============================================================
+
+        function getCombinedImageBlob() {
+            return new Promise((resolve, reject) => {
+                const inputTextRaw = inputText.value.trim();
+                const outputTextRaw = outputText.textContent.trim();
+                if (!outputTextRaw || outputTextRaw === '✨ ବାନ୍ନା ଏଠାରେ ଚମକିବ') {
+                    showToast('କୁଁଡ଼ୁଖ୍ ଆଉଟପୁଟ୍ ଖାଲି ଅଛି', '⚠️');
+                    reject('no output');
+                    return;
+                }
+
+                const container = document.createElement('div');
+                container.style.position = 'fixed';
+                container.style.left = '-9999px';
+                container.style.top = '-9999px';
+                container.style.width = '820px';
+                container.style.padding = '32px 38px 22px 38px';
+                container.style.background = 'radial-gradient(ellipse at 20% 30%, #1a0b2e, #0f0a1a, #05030a)';
+                container.style.borderRadius = '24px';
+                container.style.color = '#f0ece4';
+                container.style.fontFamily = "'Inter', -apple-system, 'Segoe UI', system-ui, sans-serif";
+                container.style.boxShadow = '0 24px 80px rgba(0,0,0,0.8)';
+                container.style.zIndex = '99999';
+                container.style.border = '1px solid rgba(255,255,255,0.02)';
+
+                const decor = document.createElement('div');
+                decor.style.height = '3px';
+                decor.style.background = 'linear-gradient(90deg, #ff0066, #ffe600, #00f0ff, #66ff00)';
+                decor.style.borderRadius = '4px';
+                decor.style.marginBottom = '20px';
+                decor.style.width = '140px';
+                decor.style.marginLeft = 'auto';
+                decor.style.marginRight = 'auto';
+                container.appendChild(decor);
+
+                const dnLabel = document.createElement('div');
+                dnLabel.textContent = '📝 ଓଡ଼ିଆ';
+                dnLabel.style.fontSize = '20px';
+                dnLabel.style.fontWeight = '700';
+                dnLabel.style.marginBottom = '8px';
+                dnLabel.style.background = 'linear-gradient(135deg, #00f0ff, #0088ff)';
+                dnLabel.style.webkitBackgroundClip = 'text';
+                dnLabel.style.webkitTextFillColor = 'transparent';
+                container.appendChild(dnLabel);
+
+                const dnContent = document.createElement('div');
+                dnContent.textContent = inputTextRaw || ' ';
+                dnContent.style.fontSize = '30px';
+                dnContent.style.padding = '14px 18px';
+                dnContent.style.background = 'rgba(255,255,255,0.02)';
+                dnContent.style.borderRadius = '14px';
+                dnContent.style.border = '1px solid rgba(255,255,255,0.03)';
+                dnContent.style.marginBottom = '24px';
+                dnContent.style.minHeight = '50px';
+                dnContent.style.wordBreak = 'break-word';
+                dnContent.style.color = '#f0ece4';
+                container.appendChild(dnContent);
+
+                const kurLabel = document.createElement('div');
+                kurLabel.textContent = '🔤 କୁଁଡ଼ୁଖ୍ ବାନ୍ନା';
+                kurLabel.style.fontSize = '20px';
+                kurLabel.style.fontWeight = '700';
+                kurLabel.style.marginBottom = '8px';
+                kurLabel.style.background = 'linear-gradient(135deg, #ff0066, #ff3300)';
+                kurLabel.style.webkitBackgroundClip = 'text';
+                kurLabel.style.webkitTextFillColor = 'transparent';
+                container.appendChild(kurLabel);
+
+                const kurContent = document.createElement('div');
+                kurContent.textContent = outputTextRaw;
+                kurContent.style.fontFamily = "'KuruxBanna Xalxo', 'Noto Sans Devanagari', sans-serif";
+                kurContent.style.fontSize = '52px';
+                kurContent.style.padding = '14px 18px';
+                kurContent.style.background = 'rgba(255,255,255,0.02)';
+                kurContent.style.borderRadius = '14px';
+                kurContent.style.border = '1px solid rgba(255,255,255,0.03)';
+                kurContent.style.minHeight = '80px';
+                kurContent.style.wordBreak = 'break-word';
+                kurContent.style.color = '#f0ece4';
+                container.appendChild(kurContent);
+
+                const footer = document.createElement('div');
+                footer.style.marginTop = '22px';
+                footer.style.textAlign = 'center';
+                footer.style.color = 'rgba(255,255,255,0.08)';
+                footer.style.fontSize = '13px';
+                footer.style.borderTop = '1px solid rgba(255,255,255,0.02)';
+                footer.style.paddingTop = '14px';
+                footer.style.letterSpacing = '0.5px';
+                footer.innerHTML = '🪶 କୁଁଡ଼ୁଖ୍ ବାନ୍ନା · ସଂରକ୍ଷଣ · ରୋଶନ୍ ଟୋପ୍ପୋ';
+                container.appendChild(footer);
+
+                document.body.appendChild(container);
+
+                requestAnimationFrame(() => {
+                    html2canvas(container, {
+                        scale: 3,
+                        backgroundColor: '#0f0a1a',
+                        logging: false,
+                        useCORS: true,
+                        allowTaint: false,
+                        width: container.scrollWidth,
+                        height: container.scrollHeight,
+                    }).then(canvas => {
+                        container.remove();
+                        canvas.toBlob(blob => {
+                            if (blob) resolve(blob);
+                            else reject('blob fail');
+                        }, 'image/png');
+                    }).catch(err => {
+                        container.remove();
+                        reject(err);
+                    });
+                });
+            });
+        }
+
+        document.getElementById('downloadCombined').addEventListener('click', async () => {
+            try {
+                const blob = await getCombinedImageBlob();
+                const link = document.createElement('a');
+                link.download = 'odia-kurukh.png';
+                link.href = URL.createObjectURL(blob);
+                link.click();
+                URL.revokeObjectURL(link.href);
+                showToast('PNG ଡାଉନଲୋଡ୍ ହୋଇଗଲା', '🖼️');
+            } catch (e) {
+                if (e !== 'no output') {
+                    console.error(e);
+                    showToast('PNG ବନାଇବାରେ ସମସ୍ୟା', '❌');
+                }
+            }
+        });
+
+        document.getElementById('shareImage').addEventListener('click', async () => {
+            try {
+                const blob = await getCombinedImageBlob();
+                const file = new File([blob], 'odia-kurukh.png', { type: 'image/png' });
+                if (navigator.share) {
+                    await navigator.share({
+                        title: 'ଓଡ଼ିଆ → କୁଁଡ଼ୁଖ୍ ବାନ୍ନା',
+                        text: 'ମୋର କୁଁଡ଼ୁଖ୍ ବାନ୍ନା ଟେକ୍ସଟ୍ ଦେଖନ୍ତୁ!',
+                        files: [file],
+                    });
+                    showToast('ସେୟାର୍ ହୋଇଗଲା', '✅');
+                } else {
+                    const link = document.createElement('a');
+                    link.download = 'odia-kurukh.png';
+                    link.href = URL.createObjectURL(blob);
+                    link.click();
+                    URL.revokeObjectURL(link.href);
+                    showToast('ଡାଉନଲୋଡ୍ ହୋଇଗଲା', '📥');
+                }
+            } catch (e) {
+                if (e !== 'no output') {
+                    console.error(e);
+                    showToast('ସେୟାର୍ କରିବାରେ ସମସ୍ୟା', '❌');
+                }
+            }
+        });
+
+        // ============================================================
+        //  POPULATE INFO — with KEYMAP POPUP
+        // ============================================================
+        function populateInfo() {
+            // ---- Alphabet Chart ----
+            const alphabetContainer = document.getElementById('alphabetChart');
+            const vowelKeys = Object.keys(vowelMap).filter(k => !['ଅଂ', 'ଅଁ'].includes(k));
+            const consKeys = Object.keys(consMap);
+
+            alphabetContainer.innerHTML = '';
+            let groups = [
+                { label: 'ସ୍ୱର (Vowels)', items: vowelKeys.map(dn => ({ dn, roman: vowelMap[dn] })) },
+                { label: 'ବ୍ୟଞ୍ଜନ (Consonants)', items: consKeys.map(dn => ({ dn, roman: consMap[dn] })) }
+            ];
+
+            groups.forEach(group => {
+                const label = document.createElement('div');
+                label.className = 'group-label';
+                label.textContent = group.label;
+                alphabetContainer.appendChild(label);
+
+                group.items.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'char-item';
+                    div.innerHTML = `
+                        <span class="kurukh-char">${item.dn}</span>
+                        <span class="roman-char">${item.roman}</span>
+                    `;
+                    alphabetContainer.appendChild(div);
+                });
+            });
+
+            // ---- KEYMAP Chart with POPUP ----
+            const keymapContainer = document.getElementById('keymapChart');
+            const romanToDn = {};
+            for (const [dn, roman] of Object.entries(consMap)) romanToDn[roman] = dn;
+            for (const [dn, roman] of Object.entries(vowelMap)) romanToDn[roman] = dn;
+
+            const keyItems = Object.keys(romanToDn).map(roman => ({ roman, dn: romanToDn[roman] }));
+
+            const odiaOrder = [
+                'ଅ', 'ଆ', 'ଇ', 'ଈ', 'ଉ', 'ଊ', 'ଏ', 'ଐ', 'ଓ', 'ଔ',
+                'କ', 'ଖ', 'ଗ', 'ଘ', 'ଙ', 'ଚ', 'ଛ', 'ଜ', 'ଝ', 'ଞ',
+                'ଟ', 'ଠ', 'ଡ', 'ଢ', 'ଣ', 'ତ', 'ଥ', 'ଦ', 'ଧ', 'ନ',
+                'ପ', 'ଫ', 'ବ', 'ଭ', 'ମ', 'ୟ', 'ର', 'ଲ', 'ୱ',
+                'ଶ', 'ଷ', 'ସ', 'ହ', 'କ୍ଷ', 'ତ୍ର', 'ଜ୍ଞ', 'ଡ଼', 'ଢ଼', 'ଖ଼'
+            ];
+            const orderIndex = {};
+            odiaOrder.forEach((ch, idx) => orderIndex[ch] = idx);
+
+            keyItems.sort((a, b) => {
+                const idxA = orderIndex[a.dn] !== undefined ? orderIndex[a.dn] : 999;
+                const idxB = orderIndex[b.dn] !== undefined ? orderIndex[b.dn] : 999;
+                return idxA - idxB;
+            });
+
+            const single = keyItems.filter(item => item.roman.length === 1);
+            const multi = keyItems.filter(item => item.roman.length > 1);
+
+            const keyGroups = [
+                { label: 'ଏକାକ୍ଷର (Single)', items: single },
+                { label: 'ସଂଯୁକ୍ତ (Multi)', items: multi }
+            ];
+
+            keymapContainer.innerHTML = '';
+            keyGroups.forEach(group => {
+                const label = document.createElement('div');
+                label.className = 'group-label';
+                label.textContent = group.label;
+                keymapContainer.appendChild(label);
+
+                group.items.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'keymap-item';
+
+                    // The Odia character shown in popup
+                    const odiaChar = item.dn;
+
+                    div.innerHTML = `
+                        <span class="key-roman">${item.roman}</span>
+                        <span class="key-sub">${odiaChar}</span>
+                        <div class="popup-tip">
+                            <span class="tip-odia">${odiaChar}</span>
+                            <span class="tip-arrow">→</span>
+                            <span class="tip-roman">${item.roman}</span>
+                            <span class="tip-label">(roman)</span>
+                        </div>
+                    `;
+                    keymapContainer.appendChild(div);
+                });
+            });
+        }
+
+        // ============================================================
+        //  BACKGROUND LETTERS
+        // ============================================================
+        function createBackgroundLetters() {
+            const container = document.getElementById('bgLetters');
+            container.innerHTML = '';
+            const letters = ['k', 'K', 'g', 'G', 'c', 'C', 'j', 'J', 't', 'T', 'd', 'D', 'n', 'p', 'P', 'b', 'B', 'm', 'M',
+                'y', 'r', 'l', 'v', 's', 'S', 'h', 'A', 'I', 'U', 'E', 'O', 'Y', '<', '^', '{', '}', '>', 'R', 'X', 'F',
+                'z', 'Z', 'L'
+            ];
+            const count = 45;
+            for (let i = 0; i < count; i++) {
+                const span = document.createElement('span');
+                span.textContent = letters[Math.floor(Math.random() * letters.length)];
+                const size = Math.random() * 55 + 24;
+                span.style.fontSize = size + 'px';
+                span.style.left = Math.random() * 100 + '%';
+                span.style.top = Math.random() * 100 + '%';
+                const duration = Math.random() * 16 + 10;
+                const delay = Math.random() * 18;
+                span.style.setProperty('--duration', duration + 's');
+                span.style.animationDelay = delay + 's';
+                span.style.transform = 'rotate(' + (Math.random() * 60 - 30) + 'deg)';
+                container.appendChild(span);
+            }
+        }
+
+        document.fonts.load('1em KuruxBanna Xalxo').then(createBackgroundLetters).catch(() => setTimeout(
+            createBackgroundLetters, 500));
+        setTimeout(() => {
+            if (document.getElementById('bgLetters').children.length === 0) createBackgroundLetters();
+        }, 1000);
+
+        // ---- INIT ----
+        inputText.value = 'କୁଁଡ଼ୁଖ୍ ଭାଷା ଆମର ପରିଚୟ ।';
+        update();
+        populateInfo();
+
+        // ============================================================
+        //  SERVICE WORKER
+        // ============================================================
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+                .then(() => console.log('✅ Service Worker registered'))
+                .catch(err => console.log('❌ Service Worker failed', err));
+        }
+    </script>
+</body>
+</html>
